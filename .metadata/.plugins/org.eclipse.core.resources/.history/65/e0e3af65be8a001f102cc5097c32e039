@@ -1,0 +1,5 @@
+package ro.emanuel.cantina.pojo;
+
+public class Meniu {
+
+}

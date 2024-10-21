@@ -1,0 +1,5 @@
+package ro.emanuel.carte.pojo;
+
+public class Carte {
+
+}

@@ -1,0 +1,5 @@
+package ro.emanuel.rubiks.dao;
+
+public class RubiksDAO {
+
+}

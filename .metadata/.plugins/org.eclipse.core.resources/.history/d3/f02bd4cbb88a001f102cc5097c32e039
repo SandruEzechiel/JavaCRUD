@@ -1,0 +1,5 @@
+package ro.emanuel.cantina.dao;
+
+public class Meniu {
+
+}

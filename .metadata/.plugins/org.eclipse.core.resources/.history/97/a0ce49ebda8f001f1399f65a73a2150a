@@ -1,0 +1,38 @@
+package ro.emanuel.toy.main;
+
+import ro.emanuel.toy.dao.ToyDAO;
+import ro.emanuel.toy.pojo.Toy;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) throws SQLException {
+         
+            
+            Toy newToy = new Toy(0, "Spiderman", "figurina", 19.99);
+            ToyDAO.createToy(newToy);
+            System.out.println("Toy created!");
+
+            
+            ArrayList<Toy> toys = ToyDAO.getAllToys();
+            for (Toy toy : toys) {
+                System.out.println("ID: " + toy.getId() + ", Name: " + toy.getName() + ", Type: " + toy.getType() + ", Price: " + toy.getPrice());
+            }
+
+          
+            if (!toys.isEmpty()) {
+                Toy firstToy = toys.get(0);
+                firstToy.setPrice(14.99);
+                ToyDAO.updateToy(firstToy);
+                System.out.println("Toy updated!");
+            }
+
+          
+            if (!toys.isEmpty()) {
+                ToyDAO.deleteToy(toys.get(0).getId());
+                System.out.println("Toy deleted!");
+            }
+
+    }
+}
